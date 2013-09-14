@@ -22,6 +22,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.cheese_and_potato.Add"
+            android:label="@string/title_activity_add"
+            android:parentActivityName="com.example.cheese_and_potato.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.cheese_and_potato.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

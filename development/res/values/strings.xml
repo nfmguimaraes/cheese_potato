@@ -2,7 +2,11 @@
 <resources>
 
     <string name="app_name">cheese_and_potato</string>
+    <string name="action_add">+</string>
+    <string name="title_activity_add">New Task</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="taskTitle">Title</string>
+    <string name="taskDesc">Descrption</string>
+    <string name="action_save">Save</string>
 
 </resources>
