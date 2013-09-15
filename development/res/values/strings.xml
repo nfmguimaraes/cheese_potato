@@ -8,5 +8,6 @@
     <string name="taskTitle">Title</string>
     <string name="taskDesc">Descrption</string>
     <string name="action_save">Save</string>
+	<string name="preference_file_key">gravaDados</string>
 
 </resources>
