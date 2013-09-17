@@ -25,22 +25,17 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        int i;sdsssdddfsssssfff
-        //TextView textView1 = (TextView)findViewById(R.id.textView1);
         ListView listView1 = (ListView)findViewById(R.id.listView1);
         
     	if(taskList.isEmpty() ){
-    	//	textView1.setText("Array sem dados");
     	}
     	else{
 	        
             aa = new ArrayAdapter<Task>(this, android.R.layout.simple_list_item_1,  
             		taskList);
             listView1.setAdapter(aa);
-            
-	        //textView1.setText("Array com dados");
     	}
-	        		//Task.taskFileCount);
+
     }
 
 
