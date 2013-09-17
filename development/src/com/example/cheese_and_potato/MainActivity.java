@@ -26,11 +26,11 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         int i;
-        TextView textView1 = (TextView)findViewById(R.id.textView1);
+        //TextView textView1 = (TextView)findViewById(R.id.textView1);
         ListView listView1 = (ListView)findViewById(R.id.listView1);
         
     	if(taskList.isEmpty() ){
-    		textView1.setText("Array sem dados");
+    	//	textView1.setText("Array sem dados");
     	}
     	else{
 	        
@@ -38,9 +38,7 @@ public class MainActivity extends Activity {
             		taskList);
             listView1.setAdapter(aa);
             
-	        textView1.setText("Array com dados");
-	        for (i=0; i<taskList.size(); i++){
-	        }
+	        //textView1.setText("Array com dados");
     	}
 	        		//Task.taskFileCount);
     }
