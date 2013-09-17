@@ -5,8 +5,11 @@
     <string name="action_add">+</string>
     <string name="title_activity_add">New Task</string>
     <string name="action_settings">Settings</string>
-    <string name="taskTitle">Title</string>
-    <string name="taskDesc">Descrption</string>
+    <string name="txtTitle">Title</string>
+    <string name="txtDesc">Descrption</string>
+    <string name="txtMail">Mail</string>
+    <string name="txtDate">Descrption</string>
+    <string name="txtAlertBy">Alert By</string>
     <string name="action_save">Save</string>
 	<string name="preference_file_key">gravaDados</string>
 

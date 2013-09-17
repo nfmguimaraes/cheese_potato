@@ -7,7 +7,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 
-
 public class Add extends Activity {
 
 	public Task newTask;

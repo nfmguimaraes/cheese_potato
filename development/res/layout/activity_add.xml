@@ -15,7 +15,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignRight="@+id/switchEmail"
         android:ems="10"
-        android:hint="Title"
+        android:hint="@string/txtTitle"
         android:inputType="text" >
 
         <requestFocus />
@@ -29,7 +29,7 @@
         android:layout_alignRight="@+id/editTitle"
         android:layout_below="@+id/editTitle"
         android:ems="10"
-        android:hint="Description"
+        android:hint="@string/txtDesc"
         android:inputType="text" />
 
     <EditText
@@ -40,7 +40,7 @@
         android:layout_alignRight="@+id/editDesc"
         android:layout_below="@+id/editDesc"
         android:ems="10"
-        android:hint="Date"
+        android:hint="@string/txtDate"
         android:inputType="date" />
 
     <TextView
@@ -50,7 +50,7 @@
         android:layout_alignLeft="@+id/editDate"
         android:layout_below="@+id/editDate"
         android:layout_marginTop="43dp"
-        android:text="Alerts by"
+        android:text="@string/txtAlertBy"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
@@ -62,7 +62,7 @@
         android:layout_marginTop="43dp"
         android:layout_toLeftOf="@+id/switchEmail"
         android:ems="10"
-        android:hint="E-mail"
+        android:hint="@string/txtMail"
         android:inputType="textEmailAddress" />
 
     <Switch
@@ -71,5 +71,14 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignTop="@+id/editEmail" />
+
+    <DatePicker
+        android:id="@+id/datePicker1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editEmail"
+        android:layout_below="@+id/editEmail"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="75dp" />
 
 </RelativeLayout>
