@@ -30,7 +30,7 @@ public class MainActivity extends Activity {
     	if(taskList.isEmpty() ){
     	}
     	else{
-//puta para a base de dados e vai de volta
+
             aa = new ArrayAdapter<Task>(this, android.R.layout.simple_list_item_1,  
             		taskList);
             listView1.setAdapter(aa);
