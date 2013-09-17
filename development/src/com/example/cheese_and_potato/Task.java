@@ -10,11 +10,8 @@ import android.widget.EditText;
 
 
 public class Task {
-	
-	//private static final int serialVersionUID = 1L;
-	
+
 	public static int taskFileCount;
-	
 	
 	private String title, desc, email;
 	private boolean emailX;
