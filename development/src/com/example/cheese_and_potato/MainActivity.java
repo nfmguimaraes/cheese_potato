@@ -13,12 +13,11 @@ import android.widget.ListView;
 
 
 public class MainActivity extends Activity {
-    
+	
+	private ArrayAdapter<Task> aa;
+	
 	public static ArrayList<Task> taskList = new ArrayList<Task>();
 	public Task task = new Task();
-	
-	ArrayList<String> appointment;
-    ArrayAdapter<Task> aa;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +27,15 @@ public class MainActivity extends Activity {
         ListView listView1 = (ListView)findViewById(R.id.listView1);
         
     	if(taskList.isEmpty() ){
+    		
+    		taskList = Task.loadTaskFile(taskList, getApplicationContext());
+    		
+    		aa = new ArrayAdapter<Task>(this, android.R.layout.simple_list_item_1, taskList);
+            listView1.setAdapter(aa);
     	}
     	else{
 
-            aa = new ArrayAdapter<Task>(this, android.R.layout.simple_list_item_1,  
-            		taskList);
+            aa = new ArrayAdapter<Task>(this, android.R.layout.simple_list_item_1, taskList);
             listView1.setAdapter(aa);
     	}
 

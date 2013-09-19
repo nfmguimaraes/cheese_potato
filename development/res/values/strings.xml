@@ -4,13 +4,12 @@
     <string name="app_name">cheese_and_potato</string>
     <string name="action_add">+</string>
     <string name="title_activity_add">New Task</string>
-    <string name="action_settings">Settings</string>
     <string name="txtTitle">Title</string>
     <string name="txtDesc">Descrption</string>
     <string name="txtMail">Mail</string>
-    <string name="txtDate">Descrption</string>
+    <string name="txtiDate">YYYYMMDD inicial</string>
+    <string name="txtfDate">YYYYMMDD final</string>
     <string name="txtAlertBy">Alert By</string>
     <string name="action_save">Save</string>
-	<string name="preference_file_key">gravaDados</string>
 
 </resources>

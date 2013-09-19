@@ -6,14 +6,12 @@ import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
+import android.widget.Switch;
 
 public class Add extends Activity {
 
 	public Task newTask;
-	
 
-
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -53,22 +51,24 @@ public class Add extends Activity {
 			return true;
 		case R.id.action_save:
 			
-			newTask = new Task();
 			EditText editTitle = (EditText)findViewById(R.id.editTitle);
 			EditText editDesc  = (EditText)findViewById(R.id.editDesc);
-			EditText editEmail = (EditText)findViewById(R.id.editEmail);
+			EditText editIDate  = (EditText)findViewById(R.id.editIDate);
+			EditText editFDate  = (EditText)findViewById(R.id.editFDate);
+			EditText editMail  = (EditText)findViewById(R.id.editEmail);
+			Switch 	 editXMail  = (Switch)findViewById(R.id.switchEmail);
+			
+			newTask = new Task(editTitle, editDesc, editIDate, editFDate, editMail, editXMail);
+			MainActivity.taskList.add(newTask);
 
-			newTask.setTitle(editTitle);
-			newTask.setDesc (editDesc);
-			newTask.setDesc (editEmail);
-	 		Task.saveTask(newTask);
-			
-			
-			
+			Task.saveTaskFile(MainActivity.taskList, getApplicationContext() );
+	 		
 			NavUtils.navigateUpFromSameTask(this);
 		}
 		return super.onOptionsItemSelected(item);
 	}
+
+	
 
 }
 
