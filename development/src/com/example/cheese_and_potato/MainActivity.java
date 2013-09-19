@@ -8,11 +8,13 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements OnItemClickListener {
 	
 	private ArrayAdapter<Task> aa;
 	
@@ -37,7 +39,12 @@ public class MainActivity extends Activity {
 
             aa = new ArrayAdapter<Task>(this, android.R.layout.simple_list_item_1, taskList);
             listView1.setAdapter(aa);
+            
+            
     	}
+    	
+    	listView1.setOnItemClickListener((OnItemClickListener) this);  
+    
 
     }
 
@@ -54,7 +61,7 @@ public class MainActivity extends Activity {
         // Handle presses on the action bar items
         switch (item.getItemId()) {
             case R.id.action_add:
-                add_task(null);
+                addNewTask(null);
                 return true;
             //case R.id.action_compose:
                 //composeMessage();
@@ -64,10 +71,24 @@ public class MainActivity extends Activity {
         }
     }    
 
+    public void onItemClick(AdapterView<?> adapter, View arg1, int position, long arg3) {  
+        
+    	Task cadastro = (Task) adapter.getAdapter().getItem(position);  
+    	
+    	Intent intent = new Intent(this, DetailsActivity.class);
+    	//intent.putextra
+    	startActivity(intent);        
+    }  
+    
     /** Called when the user clicks the add task button */
-    public void add_task(View view){
+    public void addNewTask(View view){
     	Intent intent = new Intent(this, Add.class);	
     	startActivity(intent);
+    }
+    
+    public void detailsTask(View view){
+
+
     }
 }
 
